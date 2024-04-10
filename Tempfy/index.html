@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempfy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="script.js"></script>
+    <main class="master-container">
+        <img src="assets/img/Group_1.svg" alt="">
+            <form class="temperature-converter" action="">
+                <h1 class="converter-title">Converter Temperatura</h1>
+                <select required name="" class="temperature-scale-select ">
+                    <option value="">Selecione a Temperatura</option>
+                    <option value="">Celsius</option>
+                    <option value="">Fahrenheit</option>
+                    <option value="">Kelvin</option>
+                </select>
+                <input required type="number" placeholder="Digite a Temperatura" class="temperature-input">
+                <button class="convert-button">Converter</button>
+                <div class="temperature-results-container hidden">
+                <h1 class="result-title">Resultado</h1>
+                <div class="temperature-result">
+                    <h2 class="result-scale">Fahrenheit</h2>
+                    <span class="result-value">32</span>
+                </div>
+                <div class="temperature-result">
+                    <h2 class="result-scale">Celsius</h2>
+                     <span class="result-value">32</span>
+                </div>
+                </div>
+            </form>
+        </main>
+</body>
+</html>
