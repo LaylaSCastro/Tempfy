@@ -56,12 +56,15 @@ body {
     cursor: pointer;
 }
 
-
 option {
     color: #000;
     width: 320px;
     height: 40px;
     font-size: 15px;
+}
+
+option::marker {
+    background-color: rebeccapurple;
 }
 
 .temperature-input {
@@ -94,7 +97,7 @@ option {
 }
 
 .convert-button:hover {
-    scale: 99%;
+    scale: 99.5%;
     transition: .1s;
     box-shadow: 0px 0px 10px 5px #00000028;
 }

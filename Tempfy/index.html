@@ -14,18 +14,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="script.js"></script>
     <main class="master-container">
         <img src="assets/img/Group_1.svg" alt="">
-            <form class="temperature-converter" action="">
+            <form class="temperature-converter" >
                 <h1 class="converter-title">Converter Temperatura</h1>
-                <select required name="" class="temperature-scale-select ">
+                <select required name="select" class="temperature-scale-select ">
                     <option value="">Selecione a Temperatura</option>
                     <option value="">Celsius</option>
                     <option value="">Fahrenheit</option>
                     <option value="">Kelvin</option>
                 </select>
-                <input required type="number" placeholder="Digite a Temperatura" class="temperature-input">
+                <input required name="input" type="number" placeholder="Digite a Temperatura" class="temperature-input">
                 <button class="convert-button">Converter</button>
                 <div class="temperature-results-container hidden">
                 <h1 class="result-title">Resultado</h1>
@@ -40,5 +39,6 @@
                 </div>
             </form>
         </main>
+        <script src="script.js"></script>
 </body>
 </html>
