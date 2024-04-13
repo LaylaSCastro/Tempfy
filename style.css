@@ -1,3 +1,4 @@
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -7,39 +8,47 @@
     box-sizing: border-box;
 }
 
+/* Estilos do corpo da página */
 body {
     background-color: #232528;
 }
 
+/* Container principal */
 .master-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
 }
 
+/* Estilos da imagem */
+.tempfyImg {
+    margin-top: 40px;
+}
+
+/* Título do conversor de temperatura */
 .converter-title {
     font-size: 27px;
     margin-bottom: 20px;
 }
 
+/* Formulário de conversão de temperatura */
 .temperature-converter {
     background-color: #009FFD;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 50px 50px 40px 50px ;
     border-radius: 15px ;
     margin-top: 10px;
-    
+    z-index: 2;
 }
 
+/* Dropdown para seleção da escala de temperatura */
 .temperature-scale-select {
-    display: grid;
-    align-items: center;
     color: #000;
     width: 320px;
     height: 47px;
@@ -56,14 +65,15 @@ body {
     cursor: pointer;
 }
 
-
-option {
+/* Opções do dropdown */
+.option-item {
     color: #000;
     width: 320px;
     height: 40px;
     font-size: 15px;
 }
 
+/* Entrada para digitar a temperatura */
 .temperature-input {
     color: #000;
     width: 320px;
@@ -76,15 +86,20 @@ option {
     font-size: 15px;
 }
 
+/* Estilos do placeholder da entrada de temperatura */
 .temperature-input::placeholder {
     color: #000;
 }
+
+/* Remover botões de aumento e diminuição de número da entrada de temperatura */
 .temperature-input::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
+
+/* Botão de conversão de temperatura */
 .convert-button {
     background-color: #ffa400;
-    padding: 10px 36%;
+    padding: 11px 35%;
     border: none;
     border-radius: 20px;
     margin: 5px;
@@ -93,14 +108,15 @@ option {
     cursor: pointer;
 }
 
+/* Estilos de hover para o botão de conversão */
 .convert-button:hover {
     scale: 99%;
     transition: .1s;
-    box-shadow: 0px 0px 10px 5px #00000028;
+    box-shadow: 0px 0px 10px 5px #0000000e;
 }
 
+/* Container para os resultados da conversão de temperatura */
 .temperature-results-container {
-    transition: 1s;
     background-color: #009FFD;
     width: 440px;
     display: flex;
@@ -108,19 +124,14 @@ option {
     align-items: center;
     justify-content: center;
     border-radius: 0px 0px 15px 15px; 
-    padding-bottom: 50px;
+    padding: 20px 0px 40px 0px;
     position: relative;
-    bottom: 7%;
-    display: none;
+    bottom: 3%;
+    z-index: 1;
+    opacity: 0;
 } 
 
-
-.result-title {
-    text-align: center;
-    font-size: 27px;
-    margin: 15px 0px 5px 0px;
-}
-
+/* Resultados individuais da conversão de temperatura */
 .temperature-result {
     display: flex;
     justify-content: space-between;
@@ -128,18 +139,40 @@ option {
     background-color: #ffff;
     color: #000;
     width: 315px;
-    height: 40px;
+    height: 50px;
     margin: 9px;
     border-radius: 10px;
     font-size: 10px;
     padding: 0px 20px 0px 20px;
 }
 
+/* Escala do resultado */
 .result-scale {
     color: #000;
 }
 
+/* Valor do resultado */
 .result-value {
     color: #009FFD;
     font-size: 15px;
+}
+
+/* Classe para ocultar elementos */
+.visible {
+    opacity: 1;
+    animation: slideTop 1.2s;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-190px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
