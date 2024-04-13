@@ -25,7 +25,7 @@ body {
 
 /* Estilos da imagem */
 .tempfyImg {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 /* Título do conversor de temperatura */
@@ -157,14 +157,13 @@ body {
     font-size: 15px;
 }
 
-/* Classe para ocultar elementos */
+/* Classe para exibir elementos */
 .visible {
     opacity: 1;
     animation: slideTop 1.2s;
 }
 
 /* ANIMAÇÃO */
-
 @keyframes slideTop {
     0% {
         transform: translateY(-190px);
